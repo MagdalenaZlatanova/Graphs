@@ -103,11 +103,13 @@ if __name__ == '__main__':
             B_best=B.copy()
             cost_best=cost_now
         costs.append(cost_now)
-    plt.plot([i for i in range (0, num_iterations)], costs)
-    plt.xlabel=('iteration number')
-    plt.ylabel=('total frienliness')
+    fig, ax = plt.subplots(figsize=(7, 5))
+    fig.subplots_adjust(bottom=0.15, left=0.2)
+    ax.plot([i for i in range (0, num_iterations)], costs)
+    ax.set_xlabel('iterations \n 5-regular graph')
+    ax.set_ylabel('Cost')
+    plt.savefig(r'C:\Users\PCI\PycharmProjects\graphs\images\EO_deterministic.png')
 
-    plt.show()
 
 
 
